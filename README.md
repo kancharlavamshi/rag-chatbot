@@ -16,12 +16,6 @@ Upload your PDFs, ask questions in natural language, and get answers grounded st
 
 ---
 
-## Demo
-
-![DocChat Demo](Screenshot%202026-06-03%20at%2012.23.30%20PM.png)
-
----
-
 ## Tech Stack
 
 | Layer | Technology |

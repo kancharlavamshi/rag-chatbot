@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/data/pdfs:/app/data/pdfs
+      - chroma_data:/app/chroma_db
+      - sqlite_data:/app
+    env_file:
+      - .env
+    environment:
+      - PDF_DIR=/app/data/pdfs
+      - CHROMA_PATH=/app/chroma_db
+      - DATABASE_URL=sqlite:////app/rag_chatbot.db
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+
+volumes:
+  chroma_data:
+  sqlite_data:

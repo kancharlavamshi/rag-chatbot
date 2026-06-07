@@ -1,0 +1,36 @@
+# ---- Secrets ----
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.apple/
+backend/.apple/
+*.egg-info/
+dist/
+build/
+
+# ---- ChromaDB & SQLite (rebuilt by /ingest) ----
+backend/chroma_db/
+backend/*.db
+
+# ---- PDF data files (add your own, not tracked) ----
+backend/data/pdfs/
+
+# ---- Next.js ----
+frontend/.next/
+frontend/node_modules/
+frontend/out/
+
+# ---- OS / Editor ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
